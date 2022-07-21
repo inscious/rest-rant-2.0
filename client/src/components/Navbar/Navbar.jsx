@@ -1,24 +1,42 @@
 import React, { useState } from "react";
+import useDarkMode from "../../hooks/useDarkMode";
 import { Link } from "react-router-dom";
-
 import { navbarLinks } from "./navbarData";
+import { MdModeNight, MdLightMode } from "react-icons/md";
+
+const ThemeIcon = () => {
+    const [darkTheme, setDarkTheme] = useDarkMode();
+    const handleMode = () => setDarkTheme(!darkTheme);
+    return (
+        <span onClick={handleMode} className="cursor-pointer">
+            {darkTheme ? (
+                <MdLightMode size="24" className="top-navigation-icon" />
+            ) : (
+                <MdModeNight size="24" className="top-navigation-icon" />
+            )}
+        </span>
+    );
+};
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const handleNav = () => setNav(!nav);
+    const handleClose = () => setNav(!nav);
 
     return (
-        <div className="h-20 mx-auto z-10">
-            <div className="px-5 xl:px-0 flex justify-between items-center w-full h-full">
+        <div className="h-20 mx-auto z-10  max-w-7xl w-full bg-white dark:bg-darkBG duration-200">
+            <div className="px-5 xl:px-0 flex justify-between items-center w-full h-full duration-200">
                 <Link to="/">
-                    <h1 className="text-3xl font-bold">REST | RANT</h1>
+                    <h1 className="text-3xl font-bold dark:text-white duration-200">
+                        REST | RANT
+                    </h1>
                 </Link>
-                <ul className="hidden lg:flex font-thin h-10 items-center w-52 justify-evenly">
+                <ul className="hidden lg:flex font-thin h-10 px-5 items-center justify-evenly ">
                     {navbarLinks.map((link) => {
                         return (
                             <li
                                 key={link.title}
-                                className="hover:text-primary hover:font-bold duration-150 mx-2 px-1"
+                                className="hover:text-primary hover:font-bold mx-2 px-1 dark:text-white duration-200"
                             >
                                 <Link to={link.url} className="">
                                     {link.title}
@@ -27,6 +45,7 @@ const Navbar = () => {
                         );
                     })}
                 </ul>
+                <ThemeIcon />
                 <div
                     id="mobile-controls"
                     className="lg:hidden scale-150 ml-auto cursor-pointer"
@@ -35,9 +54,8 @@ const Navbar = () => {
                     {!nav ? (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="h-5 w-5 dark:fill-white duration-200"
                             viewBox="0 0 20 20"
-                            fill="black"
                         >
                             <path
                                 fillRule="evenodd"
@@ -48,7 +66,7 @@ const Navbar = () => {
                     ) : (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="h-5 w-5 dark:fill-white duration-200"
                             viewBox="0 0 20 20"
                             fill="black"
                         >
@@ -64,18 +82,21 @@ const Navbar = () => {
 
             <ul
                 className={
-                    !nav ? "hidden" : "absolute w-full lg:hidden flex flex-col"
+                    !nav
+                        ? "hidden"
+                        : "absolute w-full lg:hidden flex flex-col"
                 }
             >
                 {navbarLinks.map((link) => {
                     return (
                         <li
                             key={link.title}
-                            className="flex flex-col h-16 items-center justify-center bg-slate-500 w-full"
+                            className="flex flex-col h-16 items-center justify-center dark:bg-darkBG duration-200 w-full bg-white"
                         >
                             <Link
                                 to={link.url}
-                                className="hover:text-primary hover:font-bold duration-150 p-5"
+                                className="hover:text-primary hover:font-bold duration-200 p-5 dark:text-white"
+                                onClick={handleClose}
                             >
                                 {link.title}
                             </Link>

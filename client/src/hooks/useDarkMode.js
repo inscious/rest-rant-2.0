@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+// useDarkMode hook code from Fireship IO
+// https://github.com/fireship-io/tailwind-dashboard
+
 const useLocalStorage = (key, initialValue) => {
     const [storedValue, setStoredValue] = useState(() => {
         try {
