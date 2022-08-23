@@ -8,11 +8,11 @@ const ThemeIcon = () => {
     const [darkTheme, setDarkTheme] = useDarkMode();
     const handleMode = () => setDarkTheme(!darkTheme);
     return (
-        <span onClick={handleMode} className="cursor-pointer">
+        <span onClick={handleMode} className="hidden cursor-pointer lg:flex">
             {darkTheme ? (
-                <MdLightMode size="24" className="top-navigation-icon" />
+                <MdLightMode size="24" className="fill-white" />
             ) : (
-                <MdModeNight size="24" className="top-navigation-icon" />
+                <MdModeNight size="24" className="fill-white" />
             )}
         </span>
     );
@@ -24,19 +24,19 @@ const Navbar = () => {
     const handleClose = () => setNav(!nav);
 
     return (
-        <div className="h-20 mx-auto z-10  max-w-7xl w-full bg-white dark:bg-darkBG duration-200">
-            <div className="px-5 xl:px-0 flex justify-between items-center w-full h-full duration-200">
+        <div className="fixed z-50 mx-auto h-20 w-screen bg-gradient-to-b from-black lg:h-32">
+            <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-100">
                 <Link to="/">
-                    <h1 className="text-3xl font-bold dark:text-white duration-200">
-                        REST | RANT
+                    <h1 className="text-2xl font-bold text-white dark:text-white">
+                        REST \ RANT
                     </h1>
                 </Link>
-                <ul className="hidden lg:flex font-thin h-10 px-5 items-center justify-evenly ">
+                <ul className="hidden h-10 items-center justify-evenly px-5 font-thin lg:flex ">
                     {navbarLinks.map((link) => {
                         return (
                             <li
                                 key={link.title}
-                                className="hover:text-primary hover:font-bold mx-2 px-1 dark:text-white duration-200"
+                                className="mx-2 px-1 text-white hover:font-bold hover:text-primary dark:text-white"
                             >
                                 <Link to={link.url} className="">
                                     {link.title}
@@ -48,13 +48,13 @@ const Navbar = () => {
                 <ThemeIcon />
                 <div
                     id="mobile-controls"
-                    className="lg:hidden scale-150 ml-auto cursor-pointer"
+                    className="ml-auto scale-150 cursor-pointer lg:hidden"
                     onClick={handleNav}
                 >
                     {!nav ? (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 dark:fill-white duration-200"
+                            className="h-5 w-5 fill-white"
                             viewBox="0 0 20 20"
                         >
                             <path
@@ -66,7 +66,7 @@ const Navbar = () => {
                     ) : (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 dark:fill-white duration-200"
+                            className="h-5 w-5 fill-white"
                             viewBox="0 0 20 20"
                             fill="black"
                         >
@@ -82,20 +82,18 @@ const Navbar = () => {
 
             <ul
                 className={
-                    !nav
-                        ? "hidden"
-                        : "absolute w-full lg:hidden flex flex-col"
+                    !nav ? "hidden" : "absolute flex w-full flex-col lg:hidden"
                 }
             >
                 {navbarLinks.map((link) => {
                     return (
                         <li
                             key={link.title}
-                            className="flex flex-col h-16 items-center justify-center dark:bg-darkBG duration-200 w-full bg-white"
+                            className="flex h-16 w-full flex-col items-center justify-center backdrop-opacity-60"
                         >
                             <Link
                                 to={link.url}
-                                className="hover:text-primary hover:font-bold duration-200 p-5 dark:text-white"
+                                className="p-5 text-white hover:font-bold hover:text-primary"
                                 onClick={handleClose}
                             >
                                 {link.title}
