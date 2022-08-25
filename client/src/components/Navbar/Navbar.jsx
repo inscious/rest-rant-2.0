@@ -3,6 +3,7 @@ import useDarkMode from "../../hooks/useDarkMode";
 import { Link } from "react-router-dom";
 import { navbarLinks } from "./navbarData";
 import { MdModeNight, MdLightMode } from "react-icons/md";
+import Hamburger from "hamburger-react";
 
 const ThemeIcon = () => {
     const [darkTheme, setDarkTheme] = useDarkMode();
@@ -25,9 +26,9 @@ const Navbar = () => {
 
     return (
         <div className="fixed z-50 mx-auto h-20 w-screen bg-gradient-to-b from-black lg:h-32">
-            <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-100">
+            <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-100 xl:max-w-7xl">
                 <Link to="/">
-                    <h1 className="text-2xl font-bold text-white dark:text-white">
+                    <h1 className="text-2xl font-bold text-white duration-200 hover:text-amber-500">
                         REST \ RANT
                     </h1>
                 </Link>
@@ -36,7 +37,7 @@ const Navbar = () => {
                         return (
                             <li
                                 key={link.title}
-                                className="mx-2 px-1 text-white hover:font-bold hover:text-primary dark:text-white"
+                                className="mx-2 px-1 text-white duration-200 hover:font-bold hover:text-amber-500 xl:mx-5"
                             >
                                 <Link to={link.url} className="">
                                     {link.title}
@@ -45,38 +46,16 @@ const Navbar = () => {
                         );
                     })}
                 </ul>
-                <ThemeIcon />
+                {/* <ThemeIcon /> */}
+                <button className="hidden rounded-md bg-white px-3 py-1 text-black duration-200 hover:bg-amber-500 lg:flex">
+                    Add Place
+                </button>
                 <div
                     id="mobile-controls"
                     className="ml-auto scale-150 cursor-pointer lg:hidden"
                     onClick={handleNav}
                 >
-                    {!nav ? (
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 fill-white"
-                            viewBox="0 0 20 20"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    ) : (
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 fill-white"
-                            viewBox="0 0 20 20"
-                            fill="black"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    )}
+                    <Hamburger size={20} color="#fff" />
                 </div>
             </div>
 
@@ -89,7 +68,7 @@ const Navbar = () => {
                     return (
                         <li
                             key={link.title}
-                            className="flex h-16 w-full flex-col items-center justify-center backdrop-opacity-60"
+                            className="flex h-16 w-full flex-col items-center justify-center bg-black"
                         >
                             <Link
                                 to={link.url}

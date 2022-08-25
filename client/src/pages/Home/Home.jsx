@@ -1,11 +1,12 @@
 import React from "react";
 import Hero from "../../components/Hero";
+import PlacesIndex from "../Places/PlacesIndex";
 
 const Home = () => {
     return (
-        <div className="-z-50 flex h- flex-col xl:px-0">
+        <div>
             <Hero />
-            
+            <PlacesIndex />
         </div>
     );
 };

@@ -6,13 +6,13 @@ import Place from "./Place";
 const PlacesIndex = () => {
     // console.log(placesData);
     return (
-        <div className="m-auto flex h-full flex-col items-center justify-evenly px-5 dark:bg-darkBG xl:px-0 ">
-            <div className="my-10">
-                <h1 className="text-3xl font-thin text-primary dark:text-white  ">
-                    Places to Rant or Rave about!
+        <div className="mx-auto flex h-full flex-col px-5 dark:bg-darkBG xl:max-w-7xl xl:px-0">
+            <div className="my-10 flex items-center justify-center">
+                <h1 className="text-xl font-bold text-black dark:text-white  ">
+                    Checkout What Others Are Saying!
                 </h1>
             </div>
-            <div className="grid w-full grid-cols-2  gap-5 md:grid-cols-4  ">
+            <div className="grid w-full grid-cols-2 gap-5 md:grid-cols-4">
                 {placesData.map((place) => {
                     return <Place place={place} key={place.name} />;
                 })}
