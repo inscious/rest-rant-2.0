@@ -6,9 +6,9 @@ import Place from "./Place";
 const PlacesIndex = () => {
     // console.log(placesData);
     return (
-        <div className="mx-auto flex h-full flex-col px-5 dark:bg-darkBG xl:max-w-7xl xl:px-0">
+        <div className="mx-auto flex h-full flex-col px-5 xl:max-w-7xl xl:px-0">
             <div className="my-10 flex items-center justify-center">
-                <h1 className="text-xl font-bold text-black dark:text-white  ">
+                <h1 className="text-xl font-medium text-gray-600">
                     Checkout What Others Are Saying!
                 </h1>
             </div>

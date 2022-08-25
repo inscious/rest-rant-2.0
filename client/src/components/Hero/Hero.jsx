@@ -16,7 +16,7 @@ const Hero = () => {
                     className="h-full w-full object-cover opacity-70 absolute"
                 />
                 <div className="top-1/2 flex justify-center relative">
-                    <h1 className="text-2xl font-bold text-white drop-shadow-xl lg:text-3xl">
+                    <h1 className="text-xl font-bold text-white drop-shadow-lg md:text-2xl lg:text-3xl duration-200">
                         Got something to rant or rave about?
                     </h1>
                 </div>

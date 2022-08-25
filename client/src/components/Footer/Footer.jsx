@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillFolder } from "react-icons/ai";
 
 const Footer = () => {
     return (
@@ -18,7 +18,7 @@ const Footer = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className="text-cente mt-10 bg-amber-500">
+        <div className="text-cente mt-10 bg-black">
             <div className="mx-auto flex max-w-7xl items-center justify-evenly px-5 xl:px-0">
                 {/* <div
                     className="item-center flex flex-col justify-center"
@@ -35,26 +35,46 @@ const Footer = () => {
                     </ul>
                 </div> */}
                 <div
-                    className="item-center flex justify-center py-10 duration-200 lg:py-20"
+                    className="flex flex-col items-center justify-center py-10 duration-200 lg:py-20"
                     id="grid-item"
                 >
                     <a
                         href="https://github.com/inscious/rest-rant-2.0"
                         target="_blank"
                     >
-                        <AiFillGithub className="h-10 w-10 fill-white duration-200 hover:scale-125" />
+                        <AiFillGithub className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
                     </a>
+                    <p className="mt-5 text-xs text-gray-300">
+                        Repository
+                    </p>
                 </div>
                 <div
-                    className="item-center flex justify-center py-10 duration-200 lg:py-20"
+                    className="flex flex-col items-center justify-center py-10 duration-200 lg:py-20"
                     id="grid-item"
                 >
                     <a
                         href="https://www.linkedin.com/in/ssaulcortes/"
                         target="_blank"
                     >
-                        <AiFillLinkedin className="h-10 w-10 fill-white duration-200 hover:scale-125" />
+                        <AiFillLinkedin className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
                     </a>
+                    <p className="mt-5 text-xs font-thin text-gray-300">
+                        Let's connect!
+                    </p>
+                </div>
+                <div
+                    className="flex flex-col items-center justify-center py-10 duration-200 lg:py-20"
+                    id="grid-item"
+                >
+                    <a
+                        href="https://rest-rant-deploy.herokuapp.com/"
+                        target="_blank"
+                    >
+                        <AiFillFolder className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
+                    </a>
+                    <p className="mt-5 text-xs font-thin text-gray-300">
+                        Original
+                    </p>
                 </div>
             </div>
         </div>
