@@ -11,14 +11,14 @@ const About = () => {
             <Hero rstImg={rstImg} title={title} />
             <div className="mx-auto mt-10 max-w-7xl px-5">
                 {/* <h1 className="text-3xl font-thin">About Rest-Rant</h1> */}
-                <p className="text-2xl font-thin">
+                <p className="text-2xl font-thin text-gray-500">
                     Rest-Rant is an SPA which users could rant or rave about
                     restaurants. Users are able to add restaurants, comments and
                     ratings. This app uses MongoDB as a database with Node &
                     Express for connecting to the front end.
                 </p>
                 <br className="my-5" />
-                <p className="text-2xl font-thin">
+                <p className="text-2xl font-thin text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Inventore, nobis, expedita aliquid illum ab suscipit
                     voluptatibus magnam tempore, laboriosam amet dolores. Vel
@@ -28,7 +28,7 @@ const About = () => {
                     dolore a, tempora enim.
                 </p>
                 <br className="my-5" />
-                <p className="text-2xl font-thin">
+                <p className="text-2xl font-thin text-gray-500">
                     Officiis harum ipsa omnis cupiditate minima ullam, earum,
                     libero dolorem ab necessitatibus neque architecto deserunt
                     obcaecati mollitia quasi tempore eveniet ipsam nisi

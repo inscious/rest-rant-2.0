@@ -41,7 +41,7 @@ const Navbar = () => {
                 scrollPosition > 0
                     ? "bg-black/75 backdrop-blur-md"
                     : "bg-gradient-to-b from-black",
-                "duration-20 fixed z-40 mx-auto h-20 w-screen lg:h-32"
+                "duration-20 fixed z-40 mx-auto h-20 w-screen lg:h-32 duration-200"
             )}
         >
             <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-100 xl:max-w-7xl">
@@ -57,12 +57,14 @@ const Navbar = () => {
                         return (
                             <li
                                 key={link.title}
-                                className="mx-2 px-1 text-white duration-200 hover:font-bold hover:text-amber-5 xl:mx-5"
+                                className="hover:text-amber-5 mx-2 px-1 text-white duration-200 hover:font-bold xl:mx-5"
                             >
                                 <NavLink
                                     to={link.url}
                                     className={({ isActive }) =>
-                                        isActive ? "font-bold text-amber-500" : "link"
+                                        isActive
+                                            ? "border-b-4 border-amber-500 font-bold"
+                                            : "/"
                                     }
                                 >
                                     {link.title}
@@ -72,7 +74,7 @@ const Navbar = () => {
                     })}
                 </ul>
                 {/* Button */}
-                <button className="hidden rounded-md border border-amber-500/90 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-amber-500/90 lg:flex">
+                <button className="hidden rounded-md border border-amber-500 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-amber-500 lg:flex">
                     <p className="drop-shadow-lg">ADD PLACE</p>
                 </button>
                 {/* Mobile Controls */}

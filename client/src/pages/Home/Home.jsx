@@ -14,7 +14,7 @@ const Home = () => {
             {/* <PlacesIndex /> */}
             <div className="mx-auto mt-10 flex max-w-7xl flex-col px-5">
                 {/* <h1 className="text-3xl font-thin">About Rest-Rant</h1> */}
-                <p className="text-2xl font-thin">
+                <p className="text-2xl font-thin text-gray-500">
                     Expedita aliquid illum ab suscipit voluptatibus magnam
                     tempore, laboriosam amet dolores. Vel ipsum tempore ab. Amet
                     repellendus neque minima placeat tempore corporis, possimus
@@ -22,7 +22,7 @@ const Home = () => {
                     dolor ab quod ducimus perspiciatis dolore a, tempora enim.
                 </p>
                 <br className="my-5" />
-                <p className="text-2xl font-thin">
+                <p className="text-2xl font-thin text-gray-500">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Vero, rem quos. Laboriosam saepe, harum porro neque a modi,
                     delectus hic laborum voluptates magnam est? Doloribus ipsa
@@ -32,7 +32,7 @@ const Home = () => {
                     quidem?
                 </p>
                 <br className="my-5" />
-                <p className="text-2xl font-thin">
+                <p className="text-2xl font-thin text-gray-500">
                     Facere enim iste pariatur atque minus quas laboriosam
                     voluptatum reprehenderit eos. Eum optio, hic adipisci
                     expedita perspiciatis minus nemo. Odio doloremque modi nam
@@ -43,7 +43,7 @@ const Home = () => {
                     sapiente consequuntur odio nam accusantium.
                 </p>
                 <br className="my-5" />
-                <p className="text-2xl font-thin">
+                <p className="text-2xl font-thin text-gray-500">
                     Amet consectetur adipisicing elit. Tempore quam consequuntur
                     sunt quas maxime accusantium est dolorem nostrum mollitia,
                     et quisquam alias voluptas eveniet magni voluptatum culpa

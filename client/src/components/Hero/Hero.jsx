@@ -13,7 +13,7 @@ const Hero = ({ rstImg, title }) => {
                 <img
                     src={rstImg}
                     alt="restaurant image"
-                    className="absolute h-full w-full object-cover opacity-70"
+                    className="absolute h-full w-full object-cover opacity-60"
                 />
                 <div className="relative top-1/2 flex justify-center">
                     <h1 className="text-xl font-bold text-white drop-shadow-lg duration-200 md:text-2xl lg:text-3xl">
