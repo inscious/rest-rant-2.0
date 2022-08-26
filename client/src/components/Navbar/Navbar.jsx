@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 // Router Imports
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { navbarLinks } from "./navbarData";
 
 // Icon Imports
@@ -57,11 +57,16 @@ const Navbar = () => {
                         return (
                             <li
                                 key={link.title}
-                                className="mx-2 px-1 text-white duration-200 hover:font-bold hover:text-amber-500 xl:mx-5"
+                                className="mx-2 px-1 text-white duration-200 hover:font-bold hover:text-amber-5 xl:mx-5"
                             >
-                                <Link to={link.url} className="">
+                                <NavLink
+                                    to={link.url}
+                                    className={({ isActive }) =>
+                                        isActive ? "font-bold text-amber-500" : "link"
+                                    }
+                                >
                                     {link.title}
-                                </Link>
+                                </NavLink>
                             </li>
                         );
                     })}
