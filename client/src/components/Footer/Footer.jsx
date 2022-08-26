@@ -44,9 +44,9 @@ const Footer = () => {
                     >
                         <AiFillGithub className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
                     </a>
-                    <p className="mt-5 text-xs text-gray-300">
-                        Repository
-                    </p>
+                    <p className="mt-5 text-xs text-gray-300">Check out</p>
+                    <br />
+                    <p className="text-xs text-gray-300">the repo.</p>
                 </div>
                 <div
                     className="flex flex-col items-center justify-center py-10 duration-200 lg:py-20"
@@ -59,8 +59,10 @@ const Footer = () => {
                         <AiFillLinkedin className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
                     </a>
                     <p className="mt-5 text-xs font-thin text-gray-300">
-                        Let's connect!
+                        Connect
                     </p>
+                    <br />
+                    <p className="text-xs font-thin text-gray-300">with me!</p>
                 </div>
                 <div
                     className="flex flex-col items-center justify-center py-10 duration-200 lg:py-20"
@@ -73,7 +75,11 @@ const Footer = () => {
                         <AiFillFolder className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
                     </a>
                     <p className="mt-5 text-xs font-thin text-gray-300">
-                        Original
+                        Check out the
+                    </p>
+                    <br />
+                    <p className="text-xs font-thin text-gray-300">
+                        first version!
                     </p>
                 </div>
             </div>
