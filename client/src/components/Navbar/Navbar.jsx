@@ -34,8 +34,6 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
     const handleNav = () => setNav(!nav);
     const scrollPosition = useScrollPosition();
-    // console.log(scrollPosition);
-    // fixed z-40 mx-auto h-20 w-screen bg-gradient-to-b from-black lg:h-32
 
     return (
         <div
@@ -68,6 +66,7 @@ const Navbar = () => {
                         );
                     })}
                 </ul>
+                {/* Button */}
                 <button className="hidden rounded-md border border-amber-500/90 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-amber-500/90 lg:flex">
                     <p className="drop-shadow-lg">ADD PLACE</p>
                 </button>
@@ -111,7 +110,7 @@ const Navbar = () => {
                 className={
                     !nav
                         ? "hidden"
-                        : "absolute top-0 flex h-screen w-full flex-col bg-black/50 backdrop-blur-md lg:hidden"
+                        : "absolute top-0 flex h-screen w-full flex-col bg-black/60 backdrop-blur-md lg:hidden"
                 }
             >
                 <ul className="flex h-full flex-col justify-evenly">
@@ -119,11 +118,11 @@ const Navbar = () => {
                         return (
                             <li
                                 key={link.title}
-                                className="flex h-16 w-full flex-col items-center justify-center duration-200 hover:bg-amber-500"
+                                className="flex h-16 w-full flex-col items-center justify-center border-y border-black/0 duration-200 hover:border-amber-500"
                             >
                                 <Link
                                     to={link.url}
-                                    className="flex h-full w-full items-center justify-center text-white duration-200 hover:font-bold hover:text-black"
+                                    className="hover:text- flex h-full w-full items-center justify-center text-white duration-200 hover:font-bold"
                                     onClick={handleNav}
                                 >
                                     {link.title}
@@ -132,8 +131,8 @@ const Navbar = () => {
                         );
                     })}
                     <li>
-                        <button className="group h-16 w-full duration-200 hover:bg-amber-500">
-                            <p className="text-white duration-200 group-hover:font-bold group-hover:text-black">
+                        <button className="group h-16 w-full border-y border-black/0 duration-200 hover:border-amber-500">
+                            <p className="group-hover:text- text-white duration-200 group-hover:font-bold">
                                 ADD PLACE
                             </p>
                         </button>
