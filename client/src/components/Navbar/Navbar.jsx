@@ -26,25 +26,26 @@ import { navbarLinks } from "./navbarData";
 //     );
 // };
 
+function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+}
+
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const handleNav = () => setNav(!nav);
-    // const [navbarColor, setNavbarColor] = useState(false);
     const scrollPosition = useScrollPosition();
-    console.log(scrollPosition);
-
-    // const changeBackground = () => {
-    //     if (window.screenY >= 132) {
-    //         setNavbarColor(true);
-    //     } else {
-    //         setNavbarColor(false);
-    //     }
-    // };
-
-    // window.addEventListener("scroll", changeBackground);
+    // console.log(scrollPosition);
+    // fixed z-40 mx-auto h-20 w-screen bg-gradient-to-b from-black lg:h-32
 
     return (
-        <div className="fixed z-40 mx-auto h-20 w-screen bg-gradient-to-b from-black lg:h-32">
+        <div
+            className={classNames(
+                scrollPosition > 0
+                    ? "bg-black/75 backdrop-blur-md"
+                    : "bg-gradient-to-b from-black",
+                "duration-20 fixed z-40 mx-auto h-20 w-screen lg:h-32"
+            )}
+        >
             <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-100 xl:max-w-7xl">
                 {/* Logo */}
                 <Link to="/">
@@ -67,7 +68,7 @@ const Navbar = () => {
                         );
                     })}
                 </ul>
-                <button className="hidden rounded-md bg-amber-500 px-3 py-1 text-white drop-shadow-lg duration-200 hover:bg-amber-400 lg:flex">
+                <button className="hidden rounded-md border border-amber-500/90 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-amber-500/90 lg:flex">
                     <p className="drop-shadow-lg">ADD PLACE</p>
                 </button>
                 {/* Mobile Controls */}
@@ -110,7 +111,7 @@ const Navbar = () => {
                 className={
                     !nav
                         ? "hidden"
-                        : "absolute top-0 flex h-screen w-full flex-col bg-black lg:hidden"
+                        : "absolute top-0 flex h-screen w-full flex-col bg-black/50 backdrop-blur-md lg:hidden"
                 }
             >
                 <ul className="flex h-full flex-col justify-evenly">

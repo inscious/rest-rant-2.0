@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <div className="flex">
             <div
-                className="relative h-60 w-screen bg-black bg-cover bg-center lg:h-[30rem] duration-200"
+                className="relative h-60 w-screen bg-black bg-cover bg-center lg:h-[30rem]"
                 // style={{ backgroundImage: `url(${headerIMG})` }}
             >
                 <img
