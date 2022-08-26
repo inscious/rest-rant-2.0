@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-// import useDarkMode from "../../hooks/useDarkMode";
+
+//  Hooks
+// import useDarkMode from "../../hooks";
+import { useScrollPosition } from "../../hooks/useScrollPosition";
+
+// Router Imports
 import { Link } from "react-router-dom";
 import { navbarLinks } from "./navbarData";
+
+// Icon Imports
 // import { MdModeNight, MdLightMode } from "react-icons/md";
 // import Hamburger from "hamburger-react";
 
@@ -22,8 +29,9 @@ import { navbarLinks } from "./navbarData";
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const handleNav = () => setNav(!nav);
-    const handleClose = () => setNav(!nav);
     // const [navbarColor, setNavbarColor] = useState(false);
+    const scrollPosition = useScrollPosition();
+    console.log(scrollPosition);
 
     // const changeBackground = () => {
     //     if (window.screenY >= 132) {
@@ -115,7 +123,7 @@ const Navbar = () => {
                                 <Link
                                     to={link.url}
                                     className="flex h-full w-full items-center justify-center text-white duration-200 hover:font-bold hover:text-black"
-                                    onClick={handleClose}
+                                    onClick={handleNav}
                                 >
                                     {link.title}
                                 </Link>
@@ -124,7 +132,7 @@ const Navbar = () => {
                     })}
                     <li>
                         <button className="group h-16 w-full duration-200 hover:bg-amber-500">
-                            <p className="text-white duration-200 group-hover:text-black group-hover:font-bold">
+                            <p className="text-white duration-200 group-hover:font-bold group-hover:text-black">
                                 ADD PLACE
                             </p>
                         </button>

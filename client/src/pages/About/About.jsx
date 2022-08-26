@@ -26,10 +26,7 @@ const About = () => {
             <div className="mx-auto mt-10 max-w-7xl px-5">
                 {/* <h1 className="text-3xl font-thin">About Rest-Rant</h1> */}
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Dicta, a soluta? Veniam ipsa pariatur cumque minus possimus
-                    nobis, doloremque consequuntur. Earum quidem adipisci eaque
-                    cum?
+                Rest-Rant is an SPA which users could rant or rave about restaurants. Users are able to add restaurants, comments and ratings.
                 </p>
                 <br className="my-10" />
                 <p>

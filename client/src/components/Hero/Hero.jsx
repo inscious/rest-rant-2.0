@@ -7,16 +7,16 @@ const Hero = () => {
     return (
         <div className="flex">
             <div
-                className="bg-black h-60 w-screen bg-cover bg-center lg:h-[30rem] relative"
+                className="relative h-60 w-screen bg-black bg-cover bg-center lg:h-[30rem] duration-200"
                 // style={{ backgroundImage: `url(${headerIMG})` }}
             >
                 <img
                     src={rstImg}
                     alt="restaurant image"
-                    className="h-full w-full object-cover opacity-70 absolute"
+                    className="absolute h-full w-full object-cover opacity-70"
                 />
-                <div className="top-1/2 flex justify-center relative">
-                    <h1 className="text-xl font-bold text-white drop-shadow-lg md:text-2xl lg:text-3xl duration-200">
+                <div className="relative top-1/2 flex justify-center">
+                    <h1 className="text-xl font-bold text-white drop-shadow-lg duration-200 md:text-2xl lg:text-3xl">
                         Got something to rant or rave about?
                     </h1>
                 </div>
