@@ -1,3 +1,3 @@
-import PlacesIndex from "./PlacesIndex";
+import Places from "./Places";
 
-export default PlacesIndex;
+export default Places;

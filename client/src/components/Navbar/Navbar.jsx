@@ -38,17 +38,17 @@ const Navbar = () => {
     return (
         <div
             className={classNames(
-                scrollPosition > 0
+                scrollPosition > 50
                     ? "bg-black/75 backdrop-blur-md"
                     : "bg-gradient-to-b from-black",
-                "duration-20 fixed z-40 mx-auto h-20 w-screen lg:h-32 duration-200"
+                "fixed z-40 mx-auto h-20 w-full duration-200 lg:h-32"
             )}
         >
-            <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-100 xl:max-w-7xl">
+            <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-200 xl:max-w-7xl">
                 {/* Logo */}
                 <Link to="/">
-                    <h1 className="z-50 text-2xl font-bold text-white duration-200 hover:text-amber-500">
-                        REST \ RANT
+                    <h1 className="z-50 text-2xl font-bold text-white duration-200 hover:text-orange-500">
+                        REST / RANT
                     </h1>
                 </Link>
                 {/* Navbar Links */}
@@ -57,13 +57,13 @@ const Navbar = () => {
                         return (
                             <li
                                 key={link.title}
-                                className="hover:text-amber-5 mx-2 px-1 text-white duration-200 hover:font-bold xl:mx-5"
+                                className="hover:text-orange -5 mx-2 px-1 text-white duration-200 hover:font-bold xl:mx-7"
                             >
                                 <NavLink
                                     to={link.url}
                                     className={({ isActive }) =>
                                         isActive
-                                            ? "border-b-4 border-amber-500 font-bold"
+                                            ? "border-b-4 border-orange-500 font-bold duration-200"
                                             : "/"
                                     }
                                 >
@@ -74,7 +74,7 @@ const Navbar = () => {
                     })}
                 </ul>
                 {/* Button */}
-                <button className="hidden rounded-md border border-amber-500 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-amber-500 lg:flex">
+                <button className="hidden rounded-md border border-orange-500 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-orange-500 lg:flex">
                     <p className="drop-shadow-lg">ADD PLACE</p>
                 </button>
                 {/* Mobile Controls */}
@@ -117,7 +117,7 @@ const Navbar = () => {
                 className={
                     !nav
                         ? "hidden"
-                        : "absolute top-0 flex h-screen w-full flex-col bg-black/60 backdrop-blur-md lg:hidden"
+                        : "absolute top-0 flex h-screen w-full flex-col bg-black/60 backdrop-blur-lg lg:hidden"
                 }
             >
                 <ul className="flex h-full flex-col justify-evenly">
@@ -125,7 +125,7 @@ const Navbar = () => {
                         return (
                             <li
                                 key={link.title}
-                                className="flex h-16 w-full flex-col items-center justify-center border-y border-black/0 duration-200 hover:border-amber-500"
+                                className="flex h-16 w-full flex-col items-center justify-center border-y border-black/0 duration-200 hover:border-orange-500"
                             >
                                 <Link
                                     to={link.url}
@@ -138,7 +138,7 @@ const Navbar = () => {
                         );
                     })}
                     <li>
-                        <button className="group h-16 w-full border-y border-black/0 duration-200 hover:border-amber-500">
+                        <button className="group h-16 w-full border-y border-black/0 duration-200 hover:border-orange-500">
                             <p className="group-hover:text- text-white duration-200 group-hover:font-bold">
                                 ADD PLACE
                             </p>

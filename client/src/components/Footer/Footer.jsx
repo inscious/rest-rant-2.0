@@ -13,7 +13,7 @@ const Footer = () => {
                         href="https://github.com/inscious/rest-rant-2.0"
                         target="_blank"
                     >
-                        <AiFillGithub className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
+                        <AiFillGithub className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-orange-500" />
                     </a>
                     <p className="mt-5 text-xs font-thin text-gray-300">
                         Check out
@@ -28,7 +28,7 @@ const Footer = () => {
                         href="https://www.linkedin.com/in/ssaulcortes/"
                         target="_blank"
                     >
-                        <AiFillLinkedin className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
+                        <AiFillLinkedin className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-orange-500" />
                     </a>
                     <p className="mt-5 text-xs font-thin text-gray-300">
                         Connect
@@ -43,7 +43,7 @@ const Footer = () => {
                         href="https://rest-rant-deploy.herokuapp.com/"
                         target="_blank"
                     >
-                        <AiFillFolder className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-amber-500" />
+                        <AiFillFolder className="h-10 w-10 fill-gray-300 duration-200 hover:scale-125 hover:fill-orange-500" />
                     </a>
                     <p className="mt-5 text-xs font-thin text-gray-300">
                         Check out the
