@@ -56,13 +56,14 @@ Rest-Rant is an SPA which users could rant or rave about restaurants. Users are 
 
 The following tools were used in this project:
 
--   [Node.js](https://nodejs.org/en/)
 -   [React](https://pt-br.reactjs.org/)
--   [Express.js](https://expressjs.com/)
--   [MongoDB](https://www.mongodb.com/)
--   [Mongoose](https://mongoosejs.com/)
 -   [TailwindCSS](https://tailwindcss.com/)
--   [React Router](https://reactrouter.com/)
+-   [React Router DOM](https://reactrouter.com/)
+-   [Framer Motion](https://www.framer.com/docs/)
+-   [Node.js](https://nodejs.org/en/)
+-   [Express.js](https://expressjs.com/)
+-   [Mongoose](https://mongoosejs.com/)
+-   [MongoDB](https://www.mongodb.com/)
 
 ## :white_check_mark: Requirements
 

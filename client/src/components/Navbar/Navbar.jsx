@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
 // Router Imports
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { navbarLinks } from "./navbarData";
 
 // Icon Imports
@@ -34,6 +34,11 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
     const handleNav = () => setNav(!nav);
     const scrollPosition = useScrollPosition();
+    const navigate = useNavigate();
+
+    const navigateToNewPlace = () => {
+        navigate("/new-place");
+    };
 
     return (
         <div
@@ -74,7 +79,10 @@ const Navbar = () => {
                     })}
                 </ul>
                 {/* Button */}
-                <button className="hidden rounded-md border border-orange-500 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-orange-500 lg:flex">
+                <button
+                    onClick={navigateToNewPlace}
+                    className="hidden rounded-md border border-orange-500 px-3 py-1 text-white drop-shadow-lg backdrop-blur-md duration-200 hover:bg-orange-500 lg:flex"
+                >
                     <p className="drop-shadow-lg">ADD PLACE</p>
                 </button>
                 {/* Mobile Controls */}
@@ -138,7 +146,13 @@ const Navbar = () => {
                         );
                     })}
                     <li>
-                        <button className="group h-16 w-full border-y border-black/0 duration-200 hover:border-orange-500">
+                        <button
+                            onClick={() => {
+                                navigateToNewPlace();
+                                handleNav();
+                            }}
+                            className="group h-16 w-full border-y border-black/0 duration-200 hover:border-orange-500"
+                        >
                             <p className="group-hover:text- text-white duration-200 group-hover:font-bold">
                                 ADD PLACE
                             </p>

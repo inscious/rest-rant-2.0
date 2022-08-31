@@ -11,7 +11,7 @@ const title = "Rest / Rant";
 
 const Home = () => {
     return (
-        <div className="h-full">
+        <div className="">
             <Hero rstImg={rstImg} title={title} />
             {/* <PlacesIndex /> */}
             <motion.div
