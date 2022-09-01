@@ -13,7 +13,7 @@ const NewPlace = () => {
         e.preventDefault();
     };
     return (
-        <div className="">
+        <div className="h-full">
             <Hero rstImg={rstImg} title={title} />
             {/* <label for="name">Your name</label> */}
             <div className="mx-auto w-full">
@@ -21,17 +21,17 @@ const NewPlace = () => {
                     initial={{ opacity: 0, y: -100 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ y: 100, opacity: 0, transition: { duration: 0.1 } }}
-                    className="mx-auto mt-10 w-full px-5 lg:w-[60rem]"
+                    className="mx-auto my-10 w-full px-5 lg:w-[60rem]"
                 >
                     <input
-                        className="mx-auto mb-3 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
+                        className="mx-auto mb-5 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
                         placeholder="Place Name"
                         type="text"
                         id="place_name"
                         name="place_name"
                     />
                     <input
-                        className="mx-auto mb-3 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
+                        className="mx-auto mb-5 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
                         placeholder="Image URL"
                         type="text"
                         id="place_image"
@@ -41,35 +41,35 @@ const NewPlace = () => {
                         id="place_city"
                         name="place_city"
                         type="text"
-                        className="mx-auto mb-3 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
+                        className="mx-auto mb-5 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
                         placeholder="State"
                     ></input>
                     <input
                         id="place_state"
                         name="place_state"
                         type="text"
-                        className="mx-auto mb-3 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
+                        className="mx-auto mb-5 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
                         placeholder="State"
                     ></input>
                     <input
                         id="place_cuisines"
                         name="place_cuisines"
                         type="text"
-                        className="mx-auto mb-3 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
+                        className="mx-auto mb-5 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
                         placeholder="Cuisines"
                     ></input>
                     <input
                         id="place_founded"
                         name="place_founded"
                         type="text"
-                        className="mx-auto mb-3 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
+                        className="mx-auto mb-5 block w-full rounded-md bg-gray-200 py-3 px-3 leading-tight text-gray-600 focus:outline-none"
                         placeholder="Founded"
                     ></input>
                     <button
                         onClick={handleSubmit}
                         className="mx-auto block w-full rounded-md border border-orange-500 py-3 px-3 text-gray-600 duration-200 hover:border-black/0 hover:bg-orange-500 hover:text-white"
                     >
-                        Add Place
+                        ADD PLACE
                     </button>
                 </motion.form>
             </div>

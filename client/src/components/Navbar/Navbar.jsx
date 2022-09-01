@@ -51,11 +51,18 @@ const Navbar = () => {
         >
             <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-200 xl:max-w-7xl">
                 {/* Logo */}
-                <Link to="/">
-                    <h1 className="z-50 text-2xl font-bold text-white duration-200 hover:text-orange-500">
-                        REST / RANT
-                    </h1>
-                </Link>
+                <>
+                    <Link to="/">
+                        <h1 className="z-50 hidden text-2xl font-bold text-white duration-200 hover:text-orange-500 lg:flex">
+                            REST / ЯANT
+                        </h1>
+                    </Link>
+                    <Link to="/">
+                        <h1 className="z-50 text-2xl font-bold text-white duration-200 hover:text-orange-500 lg:hidden">
+                            R / Я
+                        </h1>
+                    </Link>
+                </>
                 {/* Navbar Links */}
                 <ul className="hidden h-10 items-center justify-evenly px-5 font-thin lg:flex ">
                     {navbarLinks.map((link) => {

@@ -19,7 +19,7 @@ const PlacesIndex = () => {
                     Checkout What Others Are Saying!
                 </h1> */}
             </div>
-            <div className="grid w-full grid-cols-2 gap-5 duration-200 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid w-full grid-cols-2 gap-4 duration-200 md:grid-cols-3 lg:grid-cols-4">
                 {placesData.map((place, index) => {
                     return <Place place={place} key={index} />;
                 })}
