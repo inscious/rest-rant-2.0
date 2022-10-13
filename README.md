@@ -9,13 +9,13 @@
 <h1 align="center">Rest Rant V2</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/inscious/rest-rant-v2?color=56BEB8">
+  <!-- <img alt="Github top language" src="https://img.shields.io/github/languages/top/inscious/rest-rant-v2?color=56BEB8"> -->
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/inscious/rest-rant-v2?color=56BEB8">
+  <!-- <img alt="Github language count" src="https://img.shields.io/github/languages/count/inscious/rest-rant-v2?color=56BEB8"> -->
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/inscious/rest-rant-v2?color=56BEB8">
+  <!-- <img alt="Repository size" src="https://img.shields.io/github/repo-size/inscious/rest-rant-v2?color=56BEB8"> -->
 
-  <img alt="License" src="https://img.shields.io/github/license/inscious/rest-rant-v2?color=56BEB8">
+  <!-- <img alt="License" src="https://img.shields.io/github/license/inscious/rest-rant-v2?color=56BEB8"> -->
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/inscious/rest-rant-v2?color=56BEB8" /> -->
 
