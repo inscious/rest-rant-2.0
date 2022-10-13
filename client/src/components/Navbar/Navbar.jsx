@@ -49,23 +49,23 @@ const Navbar = () => {
                 "fixed z-40 mx-auto h-20 w-full duration-200 lg:h-32"
             )}
         >
-            <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-200 xl:max-w-7xl">
+            <div className="mx-auto flex h-full w-full items-center justify-between px-5 duration-200 xl:max-w-7xl fill-slate-50">
                 {/* Logo */}
                 <>
                     <Link to="/">
-                        <h1 className="z-50 hidden text-2xl font-bold text-white duration-200 hover:text-orange-500 lg:flex">
+                        <h1 className="z-50 hidden text-3xl font-bold text-white duration-200 hover:text-orange-500 lg:flex">
                             REST / ЯANT
                         </h1>
                     </Link>
                     <Link to="/">
-                        <h1 className="z-50 text-2xl font-bold text-white duration-200 hover:text-orange-500 lg:hidden">
+                        <h1 className="z-50 text-3xl font-bold text-white duration-200 hover:text-orange-500 lg:hidden">
                             R / Я
                         </h1>
                     </Link>
                 </>
                 {/* Navbar Links */}
                 <>
-                    <ul className="hidden h-10 items-center justify-evenly px-5 font-thin lg:flex ">
+                    <ul className="mx-auto hidden h-10 items-center justify-evenly px-5 font-thin lg:flex">
                         {navbarLinks.map((link) => {
                             return (
                                 <li
