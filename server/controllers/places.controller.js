@@ -10,7 +10,23 @@ const router = express.Router();
 export const getPlaces = async (req, res) => {
     try {
         const placesData = await Place.find();
-        res.status(200).json(placesData);
+        let response = []
+        placesData.map((place) => {
+            let new_place = {
+                name: place.name,
+                pic: place.pic,
+                cuisines: place.cuisines,
+                city: place.city,
+                state: place.state,
+                founded: place.founded,
+                comments: place.comments
+            }
+
+           response.push(new_place) 
+        })
+        // console.log(response)
+        // console.log(placesData)
+        res.status(200).json(response);
     } catch (error) {
         res.status(404).json(error.message);
     }
@@ -31,14 +47,25 @@ export const addPlace = async (req, res) => {
 };
 
 // GET SINGLE PLACE
+// Possible way to create average star rating
 export const getSinglePlace = async (req, res) => {
     const { id } = req.params;
     try {
-        const singlePlace = await Place.findById(id).populate("comments");
+        let stars = []
+        Place.findById(id).populate("comments")
+            .exec(async function (err, data){
+            data.map(comment => {
+                stars.push(comment.star)
+            })
+        
+        });
         // .then((place) => {});
         res.status(200).json(singlePlace);
     } catch (error) {
         res.status(404).json(error.message);
+        // res.status(400).json({
+        //     message: `${error} has occured for getSinglePlace`
+        // })
     }
 };
 // Get/Show Route
