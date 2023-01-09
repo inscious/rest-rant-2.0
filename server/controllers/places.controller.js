@@ -1,6 +1,5 @@
 import express from "express";
 import mongoose from "mongoose";
-
 import Place from "../models/places.model.js";
 import Comment from "../models/comment.model.js";
 
@@ -41,6 +40,28 @@ export const getSinglePlace = async (req, res) => {
         res.status(404).json(error.message);
     }
 };
+
+// Edit Route
+export const editPlace = async (req, res) => {
+    const { id } = req.params;
+    const { name, pic, cuisines, city, state } = req.body;
+
+    if (!mongoose.Types.ObjectId.isValid(id))
+        return res.status(404).send(`No post with id: ${id}`);
+
+    const updatedPlace = {
+        name,
+        pic,
+        cuisines,
+        city,
+        state,
+        _id: id,
+    };
+
+    await Place.findByIdAndUpdate(id, updatedPlace, { new: true });
+    res.json(updatedPlace);
+};
+
 // Get/Show Route
 // router.get("/:id", (req, res) => {
 //     db.Place.findById(req.params.id)
@@ -110,17 +131,6 @@ export const getSinglePlace = async (req, res) => {
 //         })
 //         .catch((err) => {
 //             console.log("err", err);
-//             res.render("error404");
-//         });
-// });
-
-// Edit Route
-// router.get("/:id/edit", (req, res) => {
-//     db.Place.findById(req.params.id)
-//         .then((place) => {
-//             res.render("places/edit", { place });
-//         })
-//         .catch((err) => {
 //             res.render("error404");
 //         });
 // });
