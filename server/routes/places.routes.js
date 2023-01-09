@@ -3,7 +3,8 @@ import {
     getPlaces,
     getSinglePlace,
     addPlace,
-    editPlace
+    editPlace,
+    deletePlace,
 } from "../controllers/places.controller.js";
 
 const router = express.Router();
@@ -13,5 +14,6 @@ router.get("/", getPlaces);
 router.get("/:id", getSinglePlace);
 router.post("/", addPlace);
 router.patch("/:id", editPlace);
+router.delete("/:id", deletePlace);
 
 export default router;

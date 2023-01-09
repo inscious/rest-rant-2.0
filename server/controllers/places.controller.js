@@ -62,6 +62,17 @@ export const editPlace = async (req, res) => {
     res.json(updatedPlace);
 };
 
+export const deletePlace = async (req, res) => {
+    const { id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(id))
+        return res.status(404).send(`No post with id: ${id}`);
+
+    await Place.findByIdAndRemove(id);
+
+    res.json({ message: "Post deleted successfully." });
+};
+
 // Get/Show Route
 // router.get("/:id", (req, res) => {
 //     db.Place.findById(req.params.id)
