@@ -2,7 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
 import cors from "cors";
-// const methodOverride = require("method-override");
 
 // EXPRESS SETTINGS
 const app = express();
@@ -28,3 +27,4 @@ app.use("/places", placesRouter);
 app.listen(PORT, () => {
     console.log("Server is running on port", PORT);
 });
+// http://localhost:5000
