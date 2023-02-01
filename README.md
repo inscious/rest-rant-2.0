@@ -46,7 +46,8 @@
 
 ## :dart: About
 
-Rest-Rant is an SPA which users could rant or rave about restaurants. Users are able to add restaurants, comments and ratings.
+<!-- Rest-Rant is an SPA which users could rant or rave about restaurants. Users are able to add restaurants, comments and ratings. -->
+A MERN stack app styled with Tailwind that enables users to share their dining experiences and rate restaurants. Users can browse for restaurants, view restaurant details and reviews, and add their own review with ratings for food, service, and ambiance. The clean and modern UI, powered by Tailwind CSS, provides an intuitive and visually appealing platform for finding and sharing information about the best dining spots.
 
 ## :sparkles: Features
 

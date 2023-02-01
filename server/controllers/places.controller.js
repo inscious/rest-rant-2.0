@@ -41,7 +41,7 @@ export const getSinglePlace = async (req, res) => {
     }
 };
 
-// Edit Route
+// EDIT PLACE
 export const editPlace = async (req, res) => {
     const { id } = req.params;
     const { name, pic, cuisines, city, state } = req.body;
@@ -62,6 +62,7 @@ export const editPlace = async (req, res) => {
     res.json(updatedPlace);
 };
 
+// DELETE PLACE
 export const deletePlace = async (req, res) => {
     const { id } = req.params;
 
@@ -134,17 +135,6 @@ export const deletePlace = async (req, res) => {
 //         });
 // });
 
-// Delete Route
-// router.delete("/:id", (req, res) => {
-//     db.Place.findByIdAndDelete(req.params.id)
-//         .then(() => {
-//             res.redirect("/places");
-//         })
-//         .catch((err) => {
-//             console.log("err", err);
-//             res.render("error404");
-//         });
-// });
 
 // Comment Route
 // router.post("/:id/comment", (req, res) => {

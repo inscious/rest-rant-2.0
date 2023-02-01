@@ -11,7 +11,6 @@ const App = () => {
             <Navbar />
             <AnimatedRoutes />
             <Footer />
-            <></>
         </Router>
     );
 };
